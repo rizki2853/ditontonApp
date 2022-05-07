@@ -104,69 +104,72 @@ class DetailContent extends StatelessWidget {
                               movie.title,
                               style: kHeading5,
                             ),
-                            BlocListener<WatchlistMovieEventBloc,
-                                WatchlistMovieEventState>(
-                              listener: (context, state) {
-                                if (state is WatchlistMovieEventLoaded) {
-                                  final message = state.message;
-                                  if (message == 'Added to Watchlist' ||
-                                      message == 'Removed from Watchlist') {
-                                    ScaffoldMessenger.of(context).showSnackBar(
-                                        SnackBar(content: Text(message)));
-                                  } else {
-                                    showDialog(
-                                        context: context,
-                                        builder: (context) {
-                                          return AlertDialog(
-                                            content: Text(message),
-                                          );
-                                        });
-                                  }
-                                }
-                              },
-                              child: BlocBuilder<WatchlistMovieStatusBloc,
-                                  WatchlistMovieStatusState>(
-                                builder: (context, state) {
-                                  if (state is WatchlistMovieStatusTrue) {
-                                    return ElevatedButton(
-                                      onPressed: () async {
-                                        context
-                                            .read<WatchlistMovieEventBloc>()
-                                            .add(RemoveWatchlistMovie(movie));
-                                        context
-                                            .read<WatchlistMovieStatusBloc>()
-                                            .add(GetWatchlistMovieStatusEvent(
-                                                movie.id));
-                                      },
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.min,
-                                        children: [
-                                          Icon(Icons.check),
-                                          Text('Watchlist'),
-                                        ],
-                                      ),
-                                    );
-                                  } else {
-                                    return ElevatedButton(
-                                      onPressed: () async {
-                                        context
-                                            .read<WatchlistMovieEventBloc>()
-                                            .add(AddWatchlistMovie(movie));
-                                        context
-                                            .read<WatchlistMovieStatusBloc>()
-                                            .add(GetWatchlistMovieStatusEvent(
-                                                movie.id));
-                                      },
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.min,
-                                        children: [
-                                          Icon(Icons.add),
-                                          Text('Watchlist'),
-                                        ],
-                                      ),
-                                    );
+                            Container(
+                              child: BlocListener<WatchlistMovieEventBloc,
+                                  WatchlistMovieEventState>(
+                                listener: (context, state) {
+                                  if (state is WatchlistMovieEventLoaded) {
+                                    final message = state.message;
+                                    if (message == 'Added to Watchlist' ||
+                                        message == 'Removed from Watchlist') {
+                                      ScaffoldMessenger.of(context)
+                                          .showSnackBar(
+                                              SnackBar(content: Text(message)));
+                                    } else {
+                                      showDialog(
+                                          context: context,
+                                          builder: (context) {
+                                            return AlertDialog(
+                                              content: Text(message),
+                                            );
+                                          });
+                                    }
                                   }
                                 },
+                                child: BlocBuilder<WatchlistMovieStatusBloc,
+                                    WatchlistMovieStatusState>(
+                                  builder: (context, state) {
+                                    if (state is WatchlistMovieStatusTrue) {
+                                      return ElevatedButton(
+                                        onPressed: () async {
+                                          context
+                                              .read<WatchlistMovieEventBloc>()
+                                              .add(RemoveWatchlistMovie(movie));
+                                          context
+                                              .read<WatchlistMovieStatusBloc>()
+                                              .add(GetWatchlistMovieStatusEvent(
+                                                  movie.id));
+                                        },
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.min,
+                                          children: [
+                                            Icon(Icons.check),
+                                            Text('Watchlist'),
+                                          ],
+                                        ),
+                                      );
+                                    } else {
+                                      return ElevatedButton(
+                                        onPressed: () async {
+                                          context
+                                              .read<WatchlistMovieEventBloc>()
+                                              .add(AddWatchlistMovie(movie));
+                                          context
+                                              .read<WatchlistMovieStatusBloc>()
+                                              .add(GetWatchlistMovieStatusEvent(
+                                                  movie.id));
+                                        },
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.min,
+                                          children: [
+                                            Icon(Icons.add),
+                                            Text('Watchlist'),
+                                          ],
+                                        ),
+                                      );
+                                    }
+                                  },
+                                ),
                               ),
                             ),
                             Text(

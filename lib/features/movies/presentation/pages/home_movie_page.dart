@@ -117,6 +117,7 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
               ),
               _buildSubHeading(
                 title: 'Popular',
+                key: Key('popular'),
                 onTap: () =>
                     Navigator.pushNamed(context, PopularMoviesPage.ROUTE_NAME),
               ),
@@ -135,6 +136,7 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
               ),
               _buildSubHeading(
                 title: 'Top Rated',
+                key: Key('top_rated'),
                 onTap: () =>
                     Navigator.pushNamed(context, TopRatedMoviesPage.ROUTE_NAME),
               ),
@@ -158,7 +160,8 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
     );
   }
 
-  Row _buildSubHeading({required String title, required Function() onTap}) {
+  Row _buildSubHeading(
+      {Key? key, required String title, required Function() onTap}) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -167,6 +170,7 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
           style: kHeading6,
         ),
         InkWell(
+          key: key,
           onTap: onTap,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
@@ -196,6 +200,7 @@ class MovieList extends StatelessWidget {
           return Container(
             padding: const EdgeInsets.all(8),
             child: InkWell(
+              key: Key(movie.title!),
               onTap: () {
                 Navigator.pushNamed(
                   context,

@@ -271,13 +271,12 @@ void main() {
       when(() => mockRecomendationMovieBloc.state)
           .thenReturn(RecomendationMovieLoaded(testMovieList));
 
-      final watchlistButton = find.byType(ElevatedButton);
-
       await tester.pumpWidget(_makeTestableWidget(MovieDetailPage(id: tId)));
 
-      expect(find.byIcon(Icons.add), findsOneWidget);
+      expect(find.byType(ElevatedButton), findsOneWidget);
 
-      await tester.tap(watchlistButton);
+      await tester.tap(find.byType(ElevatedButton));
+
       await tester.pump();
 
       expect(find.byType(AlertDialog), findsOneWidget);
