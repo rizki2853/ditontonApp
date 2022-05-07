@@ -1,14 +1,15 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:ditonton/features/movies/presentation/blocs/movie_detail/movie_detail_bloc.dart';
-import 'package:ditonton/features/movies/presentation/blocs/recomendation_movie/recomendation_movie_bloc.dart';
-import 'package:ditonton/features/movies/presentation/blocs/watchlist_movie_event/watchlist_movie_event_bloc.dart';
-import 'package:ditonton/features/movies/presentation/blocs/watchlist_movie_status/watchlist_movie_status_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+
 import '../../../../common/constants.dart';
 import '../../domain/entities/genre.dart';
 import '../../domain/entities/movie_detail.dart';
+import '../blocs/movie_detail/movie_detail_bloc.dart';
+import '../blocs/recomendation_movie/recomendation_movie_bloc.dart';
+import '../blocs/watchlist_movie_event/watchlist_movie_event_bloc.dart';
+import '../blocs/watchlist_movie_status/watchlist_movie_status_bloc.dart';
 
 class MovieDetailPage extends StatefulWidget {
   static const ROUTE_NAME = '/detail';

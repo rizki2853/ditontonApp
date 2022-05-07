@@ -1,7 +1,8 @@
-import 'package:ditonton/features/movies/presentation/blocs/search_movie/search_movie_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 import '../../../../common/constants.dart';
+import '../blocs/search_movie/search_movie_bloc.dart';
 import '../widgets/movie_card_list.dart';
 
 class SearchPage extends StatelessWidget {

@@ -1,21 +1,5 @@
-import 'package:ditonton/features/movies/presentation/blocs/movie_detail/movie_detail_bloc.dart';
-import 'package:ditonton/features/movies/presentation/blocs/now_playing_movie/now_playing_movie_bloc.dart';
-import 'package:ditonton/features/movies/presentation/blocs/popular_movie/popular_movie_bloc.dart';
-import 'package:ditonton/features/movies/presentation/blocs/recomendation_movie/recomendation_movie_bloc.dart';
-import 'package:ditonton/features/movies/presentation/blocs/search_movie/search_movie_bloc.dart';
-import 'package:ditonton/features/movies/presentation/blocs/top_rated_movie/top_rated_movie_bloc.dart';
-import 'package:ditonton/features/movies/presentation/blocs/watchlist_movie/watchlist_movie_bloc.dart';
-import 'package:ditonton/features/movies/presentation/blocs/watchlist_movie_event/watchlist_movie_event_bloc.dart';
-import 'package:ditonton/features/movies/presentation/blocs/watchlist_movie_status/watchlist_movie_status_bloc.dart';
-import 'package:ditonton/features/tvs/presentation/blocs/now_playing_tv_show/now_playing_tv_show_bloc.dart';
-import 'package:ditonton/features/tvs/presentation/blocs/recomendation_tv_show/recomendation_tv_show_bloc.dart';
-
-import 'package:ditonton/features/tvs/presentation/blocs/top_rate_tv_show/top_rate_tv_show_bloc.dart';
-import 'package:ditonton/features/tvs/presentation/blocs/tv_show_detail/tv_show_detail_bloc.dart';
-import 'package:ditonton/features/tvs/presentation/blocs/watchlist_event/watchlist_event_bloc.dart';
-import 'package:ditonton/features/tvs/presentation/blocs/watchlist_status/watchlist_status_bloc.dart';
-import 'package:ditonton/features/tvs/presentation/blocs/watchlist_tv_show/watchlist_tv_show_bloc.dart';
 import 'package:get_it/get_it.dart';
+
 import 'common/db/database_helper.dart';
 import 'common/http_ssl_pining.dart';
 import 'features/movies/data/datasources/movie_local_data_source.dart';
@@ -32,6 +16,15 @@ import 'features/movies/domain/usecases/get_watchlist_status.dart';
 import 'features/movies/domain/usecases/remove_watchlist.dart';
 import 'features/movies/domain/usecases/save_watchlist.dart';
 import 'features/movies/domain/usecases/search_movies.dart';
+import 'features/movies/presentation/blocs/movie_detail/movie_detail_bloc.dart';
+import 'features/movies/presentation/blocs/now_playing_movie/now_playing_movie_bloc.dart';
+import 'features/movies/presentation/blocs/popular_movie/popular_movie_bloc.dart';
+import 'features/movies/presentation/blocs/recomendation_movie/recomendation_movie_bloc.dart';
+import 'features/movies/presentation/blocs/search_movie/search_movie_bloc.dart';
+import 'features/movies/presentation/blocs/top_rated_movie/top_rated_movie_bloc.dart';
+import 'features/movies/presentation/blocs/watchlist_movie/watchlist_movie_bloc.dart';
+import 'features/movies/presentation/blocs/watchlist_movie_event/watchlist_movie_event_bloc.dart';
+import 'features/movies/presentation/blocs/watchlist_movie_status/watchlist_movie_status_bloc.dart';
 import 'features/tvs/data/datasources/tv_show_local_data_source.dart';
 import 'features/tvs/data/datasources/tv_show_remote_data_source.dart';
 import 'features/tvs/data/repositories/tv_repository_impl.dart';
@@ -46,8 +39,15 @@ import 'features/tvs/domain/usecases/get_watch_list_tv_status.dart';
 import 'features/tvs/domain/usecases/remove_watchlist_tv.dart';
 import 'features/tvs/domain/usecases/save_watch_list_tv.dart';
 import 'features/tvs/domain/usecases/search_tv.dart';
+import 'features/tvs/presentation/blocs/now_playing_tv_show/now_playing_tv_show_bloc.dart';
 import 'features/tvs/presentation/blocs/popular/popular_tv_show_bloc.dart';
+import 'features/tvs/presentation/blocs/recomendation_tv_show/recomendation_tv_show_bloc.dart';
 import 'features/tvs/presentation/blocs/search_tv_show/search_tv_show_bloc.dart';
+import 'features/tvs/presentation/blocs/top_rate_tv_show/top_rate_tv_show_bloc.dart';
+import 'features/tvs/presentation/blocs/tv_show_detail/tv_show_detail_bloc.dart';
+import 'features/tvs/presentation/blocs/watchlist_event/watchlist_event_bloc.dart';
+import 'features/tvs/presentation/blocs/watchlist_status/watchlist_status_bloc.dart';
+import 'features/tvs/presentation/blocs/watchlist_tv_show/watchlist_tv_show_bloc.dart';
 
 final locator = GetIt.instance;
 

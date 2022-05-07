@@ -1,7 +1,4 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:ditonton/features/movies/presentation/blocs/now_playing_movie/now_playing_movie_bloc.dart';
-import 'package:ditonton/features/movies/presentation/blocs/popular_movie/popular_movie_bloc.dart';
-import 'package:ditonton/features/movies/presentation/blocs/top_rated_movie/top_rated_movie_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -9,6 +6,9 @@ import '../../../../common/constants.dart';
 import '../../../tvs/presentation/pages/home_tv_page.dart';
 import '../../../tvs/presentation/pages/watchlist_tv_page.dart';
 import '../../domain/entities/movie.dart';
+import '../blocs/now_playing_movie/now_playing_movie_bloc.dart';
+import '../blocs/popular_movie/popular_movie_bloc.dart';
+import '../blocs/top_rated_movie/top_rated_movie_bloc.dart';
 import 'about_page.dart';
 import 'movie_detail_page.dart';
 import 'popular_movies_page.dart';

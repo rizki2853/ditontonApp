@@ -1,8 +1,8 @@
 import 'package:bloc/bloc.dart';
-import 'package:ditonton/features/tvs/domain/usecases/get_tv_recommendations.dart';
 import 'package:equatable/equatable.dart';
 
 import '../../../domain/entities/tv.dart';
+import '../../../domain/usecases/get_tv_recommendations.dart';
 
 part 'recomendation_tv_show_event.dart';
 part 'recomendation_tv_show_state.dart';

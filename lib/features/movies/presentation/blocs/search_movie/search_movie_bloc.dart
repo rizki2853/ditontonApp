@@ -1,8 +1,9 @@
 import 'package:bloc/bloc.dart';
-import 'package:ditonton/features/movies/domain/entities/movie.dart';
-import 'package:ditonton/features/movies/domain/usecases/search_movies.dart';
 import 'package:equatable/equatable.dart';
 import 'package:rxdart/rxdart.dart';
+
+import '../../../domain/entities/movie.dart';
+import '../../../domain/usecases/search_movies.dart';
 
 part 'search_movie_event.dart';
 part 'search_movie_state.dart';

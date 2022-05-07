@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 import '../blocs/top_rated_movie/top_rated_movie_bloc.dart';
 import '../widgets/movie_card_list.dart';
 

@@ -1,13 +1,14 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:ditonton/features/tvs/presentation/blocs/recomendation_tv_show/recomendation_tv_show_bloc.dart';
-import 'package:ditonton/features/tvs/presentation/blocs/tv_show_detail/tv_show_detail_bloc.dart';
-import 'package:ditonton/features/tvs/presentation/blocs/watchlist_event/watchlist_event_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+
 import '../../../../common/constants.dart';
 import '../../../movies/domain/entities/genre.dart';
 import '../../domain/entities/tv_show_detail.dart';
+import '../blocs/recomendation_tv_show/recomendation_tv_show_bloc.dart';
+import '../blocs/tv_show_detail/tv_show_detail_bloc.dart';
+import '../blocs/watchlist_event/watchlist_event_bloc.dart';
 import '../blocs/watchlist_status/watchlist_status_bloc.dart';
 
 class TvShowDetailPage extends StatefulWidget {

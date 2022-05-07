@@ -1,8 +1,9 @@
 import 'package:bloc/bloc.dart';
-import 'package:ditonton/features/movies/domain/entities/movie_detail.dart';
-import 'package:ditonton/features/movies/domain/usecases/remove_watchlist.dart';
-import 'package:ditonton/features/movies/domain/usecases/save_watchlist.dart';
 import 'package:equatable/equatable.dart';
+
+import '../../../domain/entities/movie_detail.dart';
+import '../../../domain/usecases/remove_watchlist.dart';
+import '../../../domain/usecases/save_watchlist.dart';
 
 part 'watchlist_movie_event_event.dart';
 part 'watchlist_movie_event_state.dart';

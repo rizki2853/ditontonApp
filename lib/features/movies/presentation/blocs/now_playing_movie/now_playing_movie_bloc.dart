@@ -1,7 +1,8 @@
 import 'package:bloc/bloc.dart';
-import 'package:ditonton/features/movies/domain/entities/movie.dart';
-import 'package:ditonton/features/movies/domain/usecases/get_now_playing_movies.dart';
 import 'package:equatable/equatable.dart';
+
+import '../../../domain/entities/movie.dart';
+import '../../../domain/usecases/get_now_playing_movies.dart';
 
 part 'now_playing_movie_event.dart';
 part 'now_playing_movie_state.dart';

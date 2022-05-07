@@ -1,6 +1,7 @@
 import 'package:bloc/bloc.dart';
-import 'package:ditonton/features/movies/domain/usecases/get_watchlist_status.dart';
 import 'package:equatable/equatable.dart';
+
+import '../../../domain/usecases/get_watchlist_status.dart';
 
 part 'watchlist_movie_status_event.dart';
 part 'watchlist_movie_status_state.dart';

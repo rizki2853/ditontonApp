@@ -1,7 +1,8 @@
 import 'package:bloc/bloc.dart';
-import 'package:ditonton/features/movies/domain/entities/movie.dart';
-import 'package:ditonton/features/movies/domain/usecases/get_popular_movies.dart';
 import 'package:equatable/equatable.dart';
+
+import '../../../domain/entities/movie.dart';
+import '../../../domain/usecases/get_popular_movies.dart';
 
 part 'popular_movie_event.dart';
 part 'popular_movie_state.dart';

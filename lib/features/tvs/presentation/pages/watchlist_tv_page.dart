@@ -1,8 +1,8 @@
-import 'package:ditonton/features/tvs/presentation/blocs/watchlist_tv_show/watchlist_tv_show_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../common/utils.dart';
+import '../blocs/watchlist_tv_show/watchlist_tv_show_bloc.dart';
 import '../widgets/tv_card_list.dart';
 
 class WatchlistTvPage extends StatefulWidget {

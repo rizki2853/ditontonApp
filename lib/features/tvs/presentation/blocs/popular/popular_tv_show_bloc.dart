@@ -1,7 +1,8 @@
 import 'package:bloc/bloc.dart';
-import 'package:ditonton/features/tvs/domain/entities/tv.dart';
-import 'package:ditonton/features/tvs/domain/usecases/get_popular_tv.dart';
 import 'package:equatable/equatable.dart';
+
+import '../../../domain/entities/tv.dart';
+import '../../../domain/usecases/get_popular_tv.dart';
 
 part 'popular_tv_show_event.dart';
 part 'popular_tv_show_state.dart';

@@ -1,6 +1,7 @@
-import 'package:ditonton/features/tvs/presentation/blocs/top_rate_tv_show/top_rate_tv_show_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../blocs/top_rate_tv_show/top_rate_tv_show_bloc.dart';
 import '../widgets/tv_card_list.dart';
 
 class TopRatedTvShowPage extends StatefulWidget {

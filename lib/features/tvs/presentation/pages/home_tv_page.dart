@@ -1,13 +1,14 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:ditonton/features/tvs/presentation/blocs/now_playing_tv_show/now_playing_tv_show_bloc.dart';
-import 'package:ditonton/features/tvs/presentation/blocs/top_rate_tv_show/top_rate_tv_show_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 import '../../../../common/constants.dart';
 import '../../../movies/presentation/pages/about_page.dart';
 import '../../../movies/presentation/pages/watchlist_movies_page.dart';
 import '../../domain/entities/tv.dart';
+import '../blocs/now_playing_tv_show/now_playing_tv_show_bloc.dart';
 import '../blocs/popular/popular_tv_show_bloc.dart';
+import '../blocs/top_rate_tv_show/top_rate_tv_show_bloc.dart';
 import 'now_playing_tv_show_page.dart';
 import 'popular_tv_show_page.dart';
 import 'top_rated_tv_show_page.dart';

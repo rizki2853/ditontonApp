@@ -1,6 +1,7 @@
-import 'package:ditonton/features/tvs/presentation/blocs/now_playing_tv_show/now_playing_tv_show_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../blocs/now_playing_tv_show/now_playing_tv_show_bloc.dart';
 import '../widgets/tv_card_list.dart';
 
 class NowPlayingTvShowPage extends StatefulWidget {

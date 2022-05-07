@@ -1,7 +1,8 @@
 import 'package:bloc/bloc.dart';
-import 'package:ditonton/features/tvs/domain/entities/tv.dart';
-import 'package:ditonton/features/tvs/domain/usecases/get_watch_list_tv.dart';
 import 'package:equatable/equatable.dart';
+
+import '../../../domain/entities/tv.dart';
+import '../../../domain/usecases/get_watch_list_tv.dart';
 
 part 'watchlist_tv_show_event.dart';
 part 'watchlist_tv_show_state.dart';

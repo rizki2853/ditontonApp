@@ -1,8 +1,8 @@
 import 'package:bloc/bloc.dart';
-import 'package:ditonton/features/tvs/domain/usecases/get_now_playing_tv_show.dart';
 import 'package:equatable/equatable.dart';
 
 import '../../../domain/entities/tv.dart';
+import '../../../domain/usecases/get_now_playing_tv_show.dart';
 
 part 'now_playing_tv_show_event.dart';
 part 'now_playing_tv_show_state.dart';

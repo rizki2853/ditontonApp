@@ -1,7 +1,8 @@
-import 'package:ditonton/features/movies/presentation/blocs/watchlist_movie/watchlist_movie_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 import '../../../../common/utils.dart';
+import '../blocs/watchlist_movie/watchlist_movie_bloc.dart';
 import '../widgets/movie_card_list.dart';
 
 class WatchlistMoviesPage extends StatefulWidget {
