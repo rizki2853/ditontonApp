@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2022-05-08 04:54:38</td>
+            <td class="headerValue">2022-05-08 06:39:51</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">0</td>
@@ -61,27 +61,28 @@
 <pre class="sourceHeading">          Line data    Source code</pre>
 <pre class="source">
 <a name="1"><span class="lineNum">       1 </span>            : import 'package:bloc/bloc.dart';</a>
-<a name="2"><span class="lineNum">       2 </span>            : import 'package:ditonton/features/movies/domain/entities/movie.dart';</a>
-<a name="3"><span class="lineNum">       3 </span>            : import 'package:ditonton/features/movies/domain/usecases/get_top_rated_movies.dart';</a>
-<a name="4"><span class="lineNum">       4 </span>            : import 'package:equatable/equatable.dart';</a>
-<a name="5"><span class="lineNum">       5 </span>            : </a>
-<a name="6"><span class="lineNum">       6 </span>            : part 'top_rated_movie_event.dart';</a>
-<a name="7"><span class="lineNum">       7 </span>            : part 'top_rated_movie_state.dart';</a>
-<a name="8"><span class="lineNum">       8 </span>            : </a>
-<a name="9"><span class="lineNum">       9 </span>            : class TopRatedMovieBloc extends Bloc&lt;TopRatedMovieEvent, TopRatedMovieState&gt; {</a>
-<a name="10"><span class="lineNum">      10 </span>            :   final GetTopRatedMovies usecase;</a>
-<a name="11"><span class="lineNum">      11 </span><span class="lineCov">          3 :   TopRatedMovieBloc({required this.usecase}) : super(TopRatedMovieInitial()) {</span></a>
-<a name="12"><span class="lineNum">      12 </span><span class="lineCov">          2 :     on&lt;TopRatedMovieEvent&gt;((event, emit) async {</span></a>
-<a name="13"><span class="lineNum">      13 </span><span class="lineCov">          2 :       emit(TopRatedMovieLoading());</span></a>
-<a name="14"><span class="lineNum">      14 </span><span class="lineCov">          3 :       final result = await usecase.execute();</span></a>
-<a name="15"><span class="lineNum">      15 </span>            : </a>
-<a name="16"><span class="lineNum">      16 </span><span class="lineCov">          1 :       result.fold(</span></a>
-<a name="17"><span class="lineNum">      17 </span><span class="lineCov">          4 :         (failure) =&gt; emit(TopRatedMovieError(failure.message)),</span></a>
-<a name="18"><span class="lineNum">      18 </span><span class="lineCov">          3 :         (result) =&gt; emit(TopRatedMovieLoaded(result)),</span></a>
-<a name="19"><span class="lineNum">      19 </span>            :       );</a>
-<a name="20"><span class="lineNum">      20 </span>            :     });</a>
-<a name="21"><span class="lineNum">      21 </span>            :   }</a>
-<a name="22"><span class="lineNum">      22 </span>            : }</a>
+<a name="2"><span class="lineNum">       2 </span>            : import 'package:equatable/equatable.dart';</a>
+<a name="3"><span class="lineNum">       3 </span>            : </a>
+<a name="4"><span class="lineNum">       4 </span>            : import '../../../domain/entities/movie.dart';</a>
+<a name="5"><span class="lineNum">       5 </span>            : import '../../../domain/usecases/get_top_rated_movies.dart';</a>
+<a name="6"><span class="lineNum">       6 </span>            : </a>
+<a name="7"><span class="lineNum">       7 </span>            : part 'top_rated_movie_event.dart';</a>
+<a name="8"><span class="lineNum">       8 </span>            : part 'top_rated_movie_state.dart';</a>
+<a name="9"><span class="lineNum">       9 </span>            : </a>
+<a name="10"><span class="lineNum">      10 </span>            : class TopRatedMovieBloc extends Bloc&lt;TopRatedMovieEvent, TopRatedMovieState&gt; {</a>
+<a name="11"><span class="lineNum">      11 </span>            :   final GetTopRatedMovies usecase;</a>
+<a name="12"><span class="lineNum">      12 </span><span class="lineCov">          3 :   TopRatedMovieBloc({required this.usecase}) : super(TopRatedMovieInitial()) {</span></a>
+<a name="13"><span class="lineNum">      13 </span><span class="lineCov">          2 :     on&lt;TopRatedMovieEvent&gt;((event, emit) async {</span></a>
+<a name="14"><span class="lineNum">      14 </span><span class="lineCov">          2 :       emit(TopRatedMovieLoading());</span></a>
+<a name="15"><span class="lineNum">      15 </span><span class="lineCov">          3 :       final result = await usecase.execute();</span></a>
+<a name="16"><span class="lineNum">      16 </span>            : </a>
+<a name="17"><span class="lineNum">      17 </span><span class="lineCov">          1 :       result.fold(</span></a>
+<a name="18"><span class="lineNum">      18 </span><span class="lineCov">          4 :         (failure) =&gt; emit(TopRatedMovieError(failure.message)),</span></a>
+<a name="19"><span class="lineNum">      19 </span><span class="lineCov">          3 :         (result) =&gt; emit(TopRatedMovieLoaded(result)),</span></a>
+<a name="20"><span class="lineNum">      20 </span>            :       );</a>
+<a name="21"><span class="lineNum">      21 </span>            :     });</a>
+<a name="22"><span class="lineNum">      22 </span>            :   }</a>
+<a name="23"><span class="lineNum">      23 </span>            : }</a>
 </pre>
       </td>
     </tr>

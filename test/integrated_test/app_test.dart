@@ -364,6 +364,11 @@ void main() {
         ((_) => Stream.value(RecomendationMovieLoaded(testMovieList))));
     when(() => mockRecomendationMovieBloc.state)
         .thenReturn(RecomendationMovieLoaded(testMovieList));
+    //search movie
+    when(() => mockMovieSearchBloc.stream)
+        .thenAnswer((_) => Stream.value(SearchMovieLoaded(testMovieList)));
+    when(() => mockMovieSearchBloc.state)
+        .thenReturn(SearchMovieLoaded(testMovieList));
   }
 
   testWidgets(
@@ -390,8 +395,8 @@ void main() {
   );
 
   testWidgets(
-    """tapping on the 'See More' button excerpt opens the movie popular page
-       where full informasion of movie will display""",
+    """tapping on the 'See More' button excerpt opens the popular Movie page
+       where full informasion of the popular Movie will display""",
     (WidgetTester tester) async {
       arrangeReturn();
       await tester.pumpWidget(_makeTestableWidget(HomeMoviePage()));
@@ -414,7 +419,7 @@ void main() {
 
   testWidgets(
     """tapping on the 'See More' button excerpt opens the Top Rated Movie page
-       where full informasion of movie will display""",
+       where full informasion of Top Rated Movie will display""",
     (WidgetTester tester) async {
       arrangeReturn();
       await tester.pumpWidget(_makeTestableWidget(HomeMoviePage()));
@@ -432,6 +437,27 @@ void main() {
       expect(find.byType(TopRatedMoviesPage), findsOneWidget);
 
       expect(find.text('Top Rated Movies'), findsOneWidget);
+    },
+  );
+
+  testWidgets(
+    """tapping on the 'Search Icon' button excerpt opens the SearchMovie page
+       where full informasion of movie will display""",
+    (WidgetTester tester) async {
+      arrangeReturn();
+      await tester.pumpWidget(_makeTestableWidget(HomeMoviePage()));
+
+      await tester.pump();
+
+      await tester.tap(find.byKey(Key('search')));
+
+      for (int i = 0; i < 5; i++) {
+        // because pumpAndSettle doesn't work with riverpod
+        await tester.pump(Duration(seconds: 1));
+      }
+
+      expect(find.byType(HomeMoviePage), findsNothing);
+      expect(find.byType(SearchPage), findsOneWidget);
     },
   );
 }
